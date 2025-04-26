@@ -2,7 +2,7 @@
 
 :root {
     --cor-de-fundo: #1E1E1E;
-    --laranja: #f19408;
+    --laranja: #e29404; /* Alteração: Definição da cor laranja */
     --branco: #FFFFFF;
     --botao-ativo: #3A375E;
     --botao-inativo: rgba(58, 55, 94, 0.5);
@@ -33,11 +33,12 @@ body {
 }
 
 .titulo-principal span {
-    color: var(--laranja);
+    color: var(--laranja); /* Aplicação da cor laranja */
 }
 
+
 .botao {
-    font-family: "Crakra Petch", sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -60,48 +61,67 @@ body {
     display: block;
 }
 
-.botao.ativo{
+.botao.ativo {
     background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--laranja);
+    border-bottom: 4px solid var(--laranja); /* Aplicação da cor laranja */
 }
 
-.aba-textos{
+.abas-textos {
     background-color: var(--texto-fundo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
 }
 
-.aba-conteudo.ativo{
+.aba-conteudo.ativo {
     display: block;
 }
 
-.aba-conteudo{
+.aba-conteudo {
     display: none;
 }
 
-.aba-conteudo-titulo-principal{
+.aba-conteudo-titulo-principal {
     font-size: 28px;
     text-align: center;
 }
 
-.aba-conteudo-titulo-secundario{
+.aba-conteudo-titulo-secundario {
     text-align: center;
-    color: var(--laranja);
+    color: var(--laranja); /* Aplicação da cor laranja */
     text-transform: uppercase;
 }
-.contador{
-    font-size: 20px;
+
+.contador {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.contador-digito{
+    padding: 0 16px;
     text-align: center;
+    min-width: 100px;
 }
 
-@media screen and (min-width: 768px){
-    .botoes{
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--laranja); /* Aplicação da cor laranja */
+    font-size: 20px;
+    margin: 0;
+}
+@media screen and (min-width: 768px) {
+    .botoes {
         display: flex;
     }
-    .botao:first-child{
+
+    .botao:first-child {
         border-radius: 40px 0 0 0;
     }
-    .botao:last-child{
+
+    .botao:last-child {
         border-radius: 0 40px 0 0;
     }
-} 
+}
